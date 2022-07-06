@@ -19,4 +19,5 @@ function gs_2_gs_copy_paste() {
     var src_s_name = 'Calculette'
     var tgt_gs_id = '1RHz-OOz43WWcJJ8yd6YDY0Wnh6hOKD0dT-MEtLE7FNA'
     var tst_s_name = 'Feuille 1'
-    copyPa
+    copyPaste(src_gs_id, src_s_name, tgt_gs_id, tst_s_name)
+}
