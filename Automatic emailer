@@ -8,7 +8,7 @@ function send_email(e) {
   Logger.log(destinataire)
   var row = e.range.getRow();
   var col = e.range.getColumn();
-  if (col === 2 && row > 2 && e.source.getActiveSheet().getName() === 'CT à faire'&& e.source.getActiveSheet().getRange(row,col).getValue()!="" && e.source.getActiveSheet().getRange(row,7).getValue()=="" ){
+  if (col === 2 && row > 2 && e.source.getActiveSheet().getName() === 'CT à faire'&& e.source.getActiveSheet().getRange(row,col).getValue()!=""){
     var dt = Utilities.formatDate(new Date(), 'Europe/Paris', 'dd/MM/YYYY').toString()
     var lead=src_sheet.getRange(row,2).getValue()
     Logger.log(lead)
@@ -24,3 +24,5 @@ function send_email(e) {
 }}
 
 // dans la feuille "CT à faire" -> chaque fois qu'un nouveau lead est rentrée en colonne B, ça envoie un mail :)))
+// + ajouter un déclencheur basé dur la feuille de calcul - lors d'une modification
+// premier outil a profiter de ce script : "https://docs.google.com/spreadsheets/d/18EXAlU0nV7vHQGnAJ3vhdd0T0Vs3ssqAsn2SGRFcujI/edit#gid=115660544"
