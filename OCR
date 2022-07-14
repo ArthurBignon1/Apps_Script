@@ -1,3 +1,5 @@
+//Google Apps script for performing OCR on all JPEGS found in the specified Drive folder. Extracts text to a Google sheet, where it's mapped to the JPEG's filename.
+
 function extractTextOnOpen() {
 
     //ADD YOUR VALUES BELOW
@@ -49,3 +51,5 @@ function extractTextOnOpen() {
         sheet.appendRow([name, body]);
     }
 };
+
+// "Drive" is not defined" error : Open menu from your script ( the place you start with Code.gs) and use : Resources - Advanced Google services and check on the Drive API v2
