@@ -8,7 +8,7 @@ var gs = SpreadsheetApp.openById(src_gs_id);
 
     var dest_gs = SpreadsheetApp.openById(tgt_gs_id);
     var target = dest_gs.getSheetByName(tst_s_name)
-    target.getRange("A:R") //clear old data. Remove this if you wanna stack your data.
+    target.getRange("A:R").clearContent() //clear old data. Remove this if you wanna stack your data.
     target.getRange(1, 1, src_last_row, src_last_col).setValues(data);
 }
 
