@@ -1,0 +1,7 @@
+function createTimeDrivenTriggers(){
+
+ScriptApp.newTrigger("gs_2_gs_copy_paste")
+  .timeBased()
+  .everyMinutes(5)
+  .create();
+}
