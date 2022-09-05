@@ -1,3 +1,5 @@
+// https://developers.google.com/apps-script/reference/script/clock-trigger-builder
+
 function copyPaste(src_gs_id, src_s_name, tgt_gs_id, tst_s_name) {
 var gs = SpreadsheetApp.openById(src_gs_id);
  var src_sheet = gs.getSheetByName(src_s_name);
