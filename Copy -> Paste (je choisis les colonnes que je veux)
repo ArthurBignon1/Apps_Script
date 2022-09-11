@@ -24,10 +24,12 @@ var srcValues = srcSheet.getDataRange().getValues()
 
 //For each row in source values,creates new array containing columns A(0), D(3) & E(4) inside of trimedValues array
 
-var trimmedValues = srcValues.map(function(row){return[row[0],row[3],row[4]];})
+var trimmedValues = srcValues.map(function(row){return[row[0],row[1],row[2],row[9],row[10],row[18],row[27],row[28]];})
 
 // Save trimmedValues array to destination
 
-tarSheet.getRange(1,1,trimmedValues.length,3).setValues(trimmedValues);
+tarSheet.getRange("A:Z").clearContent()
+
+tarSheet.getRange(1,1,trimmedValues.length,8).setValues(trimmedValues);
 
 }
