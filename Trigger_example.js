@@ -21,7 +21,7 @@ function createTimeTriggerAtSpecificHourMinute() {
    .inTimezone("Europe/Paris")
    .create();
 
- ScriptApp.newTrigger("gs_2_gs_copy_pastea")
+ ScriptApp.newTrigger("gs_2_gs_copy_paste")
    .timeBased()
    .atHour(10)
    .nearMinute(55)
