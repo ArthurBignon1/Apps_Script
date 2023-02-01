@@ -1,4 +1,19 @@
 function copySheet()
+var sourceTable = SpreadsheetApp.openById("1F1Z1ne8wmPaXbpYTzKXJqNsU5vxy5awPaUu44xKlOfU"); // Source file
+var srcSheet = sourceTable.getSheetByName("RD2");
+var targetTable = SpreadsheetApp.openById("1FyDA830qRJ4OdxuKS3iIMIf3mcSEqpXMkXXloHCfWKY"); // Target file
+var tarSheet = targetTable.getSheetByName("Feuille 1");
+var srcValues = srcSheet.getDataRange().getValues()
+var trimmedValues = srcValues.map(function(row){return[row[0],row[1],row[2],row[9],row[10],row[18],row[27],row[28]];})
+tarSheet.getRange("A:Z").clearContent()
+tarSheet.getRange(1,1,trimmedValues.length,8).setValues(trimmedValues);
+}
+
+___________________
+
+// avec les commentaires :
+
+function copySheet()
 
 {
 
