@@ -1,4 +1,5 @@
 function copySheet()
+{
 var sourceTable = SpreadsheetApp.openById("1F1Z1ne8wmPaXbpYTzKXJqNsU5vxy5awPaUu44xKlOfU"); // Source file
 var srcSheet = sourceTable.getSheetByName("RD2");
 var targetTable = SpreadsheetApp.openById("1FyDA830qRJ4OdxuKS3iIMIf3mcSEqpXMkXXloHCfWKY"); // Target file
